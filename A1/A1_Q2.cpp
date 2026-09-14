@@ -23,10 +23,10 @@ int main()
 {
     const double g = 9.81;
     const double v0 = 20.0;
-    const double deg = 45.0;
+    const double deg = 60.0;
     const double h = 0.01;
     const int N = 10000;
-    const double a = 3.1415926 * deg / 180.0; // radian
+    const double a = EIGEN_PI * deg / 180.0; // radian
 
     // Continuous system
     Mat A = Mat::Zero();
