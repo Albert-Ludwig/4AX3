@@ -40,7 +40,6 @@ int main()
     Mat Ad = Mat::Identity() + h * A;
     Vec bd = h * b;
 
-    // Initial condition: [px, vx, py, vy]
     Vec x0;
     x0 << 0.0, v0 * std::cos(a), 0.0, v0 * std::sin(a);
 
@@ -62,7 +61,6 @@ int main()
         out << t << ' ' << x.transpose() << ' ' << xd.transpose() << '\n';
     };
 
-    // Simulate until both models reach the ground
     write(0.0);
     for (int i = 1; i <= N; ++i)
     {
