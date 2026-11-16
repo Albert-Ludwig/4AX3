@@ -65,10 +65,11 @@ Run these commands from the A4 directory:
 ~~~sh
 clang++ -std=c++17 -O2 -I/opt/homebrew/include/eigen3 main.cpp kalman.cpp DARE.cpp -o lander
 ./lander > landing_output.txt
+cd result
 gnuplot plot.gnuplot
 ~~~
 
-The main program writes landing_data.dat with time, true height, true velocity, estimated height, estimated velocity, estimated gravity, and engine input. The gnuplot script reads this data and generates the two figures below.
+The main program writes result/landing_data.dat with time, true height, true velocity, estimated height, estimated velocity, estimated gravity, and engine input. The gnuplot script in result reads this data and generates the two figures below.
 
 ## Result
 
@@ -76,10 +77,10 @@ With seed 42, the lander crosses the ground at $t=24.02\,\mathrm{s}$ with $h=-1.
 
 ### Landing trajectory: height and vertical velocity
 
-![Lander landing trajectory](landing.png)
+![Lander landing trajectory](result/landing.png)
 
 ### Gravity estimate
 
-![Estimated gravity compared with true gravity](gravity_estimate.png)
+![Estimated gravity compared with true gravity](result/gravity_estimate.png)
 
 For the paper submission, print main.cpp and both figures.

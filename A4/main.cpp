@@ -73,9 +73,9 @@ void setup(void)
   double u = 0.0; // initial control input, which is the upward acceleration
   int steps = 0;  // current step
   VectorXd x = observer.state();
-  ofstream data("landing_data.dat");
+  ofstream data("result/landing_data.dat");
   if (!data)
-    throw runtime_error("Cannot open landing_data.dat");
+    throw runtime_error("Cannot open result/landing_data.dat");
   data.precision(10);
   data << "# t h v h_est v_est g_est u\n";
   data << 0.0 << ' ' << h << ' ' << v << ' '
